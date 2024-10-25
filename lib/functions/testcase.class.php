@@ -6208,8 +6208,8 @@ class testcase extends tlObjectWithAttachments {
     // Remember we are using (at least on Postgres FK => we need to delete 
     // in a precise order.
 
-    $stepSet = $this->get_steps($tcversion_id,0,
-                        array('fields2get' => 'id', 'accessKey' => 'id'));
+    $stepSet = (array)$this->get_steps($tcversion_id,0,
+                                        array('fields2get' => 'id', 'accessKey' => 'id'));
     if( count($stepSet) > 0 )
     {
       $this->delete_step_by_id(array_keys($stepSet));
