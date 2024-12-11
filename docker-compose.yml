@@ -38,7 +38,7 @@ services:
     networks:
     - testlink
     ports:
-    - 8080:80
+    - 80:80
     volumes:
     - ./:/var/www/testlink
     - ./logs:/var/testlink/logs
