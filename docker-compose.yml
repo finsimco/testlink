@@ -43,7 +43,7 @@ services:
     - ./:/var/www/testlink
     - ./logs:/var/testlink/logs
     - ./ssl-cert/cert.pem:/etc/ssl/certs/ssl-cert-snakeoil.pem
-    - ./ssl-cert/cert-key.pem:/etc/ssl/certs/ssl-cert-snakeoil.key
+    - ./ssl-cert/cert-key.pem:/etc/ssl/private/ssl-cert-snakeoil.key
     - ./upload_area:/var/testlink/upload_area
 
   testlink-restore:
