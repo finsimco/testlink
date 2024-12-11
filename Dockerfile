@@ -20,6 +20,8 @@ WORKDIR /var/www/testlink
 COPY . .
 COPY ./docker/php.ini-production /usr/local/etc/php/conf.d/php.ini
 
+RUN usermod -u 1000 www-data
+RUN groupmod -g 1000 www-data
 RUN chown -R www-data:www-data /var/www/testlink
 RUN rm -rf docker
 ENV APACHE_DOCUMENT_ROOT=/var/www/testlink
